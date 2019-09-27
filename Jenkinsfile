@@ -1,14 +1,13 @@
 pipeline {
     agent any
     tools {
-        maven 'maven'
-        jdk 'jdk'
+        maven 'maven-3-5-2'
+        jdk 'jdk8'
     }
     stages {
         stage('Build') {
             steps {
                 sh 'mvn clean package'
-		sh 'file 24'
             }
         }
         stage('Test') {
