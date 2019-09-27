@@ -1,8 +1,8 @@
 pipeline {
     agent any
     tools {
-        maven 'maven-3-5-2'
-        jdk 'jdk8'
+        maven 'maven'
+        jdk 'jdk'
     }
     stages {
         stage('Build') {
@@ -13,7 +13,6 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'mvn test'
-		sh 'file 55'
             }
             post {
                 always {
